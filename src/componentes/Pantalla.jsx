@@ -1,23 +1,10 @@
 import React from 'react';
-import '../hojas-de-estilo/Boton.css';
-import {cambiarColor } from './../redux/actions'
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import '../hojas-de-estilo/Pantalla.css';
 
-function Boton(props) {
+const Pantalla = ({ input }) => (
+  <div className='input' id="border">
+    {input}      
+  </div>
+); 
 
-  const color = useSelector(state => state.color)
-  const dispatch = useDispatch()
-  React.useEffect(() =>  dispatch(cambiarColor()),[])
-
-  return (
-
-    <div
-      className={color=== true ? "boton-contenedor" : "boton-dark"}
-      onClick={() => props.manejarClic(props.children)}>
-      {props.children}
-    </div>
-  );
-}
-
-export default Boton;
+export default Pantalla;
