@@ -1,4 +1,5 @@
 .App {
+  flex-direction: column;
   background-color: #e0e0e0;
   min-height: 100vh;
   width: 100%;
@@ -14,7 +15,7 @@
 }
 .switch-button {
   display: inline-block;
-  margin-right: 10px;
+  margin-bottom: 20px;
 }
 .switch-button .switch-button__checkbox {
   display: none;
@@ -48,6 +49,7 @@
 }
 
 .Negro {
+  flex-direction: column;
   background-color: rgba(0, 0, 0, 0.63);
   min-height: 100vh;
   width: 100%;
@@ -57,7 +59,7 @@
 }
 
 .contenedor-Negro{
-  width:100%;
+  width:330px;
   height:558px;
   max-width: 350px;
   border-radius: 32px;
@@ -66,7 +68,7 @@
   overflow: hidden;
 }
 .contenedor-calculadora {
-  width:100%;
+  width:330px;
   height:558px;
   max-width: 350px;
   border-radius: 32px;
@@ -89,5 +91,5 @@
 }
 
 .boton{
-    width: 85px;
+    width: 80px;
 }

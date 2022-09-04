@@ -2,7 +2,7 @@ import './App.css';
 import Boton from './componentes/Boton';
 import Pantalla from './componentes/Pantalla';
 import { useState } from 'react';
-import { evaluate, setUnion } from 'mathjs';
+import { evaluate } from 'mathjs';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import {cambiarColor } from './redux/actions'
@@ -52,11 +52,12 @@ function App() {
   };
 
   return (
-    <div className={color===true ? 'App' : 'Negro'}>
-      <div class="switch-button">
+   <div className={color===true ? 'App' : 'Negro'}>
+     <div class="switch-button">
     <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox" onClick={handleColor}/>
     <label for="switch-label" class="switch-button__label"></label>
       </div>
+    <div >
       <div className={color===true ? 'contenedor-calculadora' : 'contenedor-Negro'}>
         <Pantalla input={input}/>
         <div className='all-button'>
@@ -97,6 +98,7 @@ function App() {
         </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
